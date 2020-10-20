@@ -26,3 +26,7 @@ Esta aplicação usa:
 ## Como correr:
 cd project
 flask run
+
+
+## Video do projecto
+https://www.youtube.com/watch?v=VTfs2cvl_PU
