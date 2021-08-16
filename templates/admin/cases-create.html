@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="O PCM é um portal que dispõe de uma base de dados central que armazena informações acerca dos casos da COVID-19 em Moçambique.">
+        <meta name="author" content="Júlio Rafael">
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PCM">
+    <meta property="og:title" content="PCM">
+    <meta property="og:description" content="O PCM é um portal que dispõe de uma base de dados central que armazena informações acerca dos casos da COVID-19 em Moçambique.">
+    <link rel="icon" href="/static/img/bg-pcm.jpg" type="image/x-icon">
+
+    <title>Coronavírus - Portal da COVID-19 em Moçambique (PCM)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <!-- Font-icon css-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="app sidebar-mini">
+    <!-- Navbar-->
+    <header class="app-header"><a class="app-header__logo" href="/admin/index">COVID-19 : PCM</a>
+      <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+      <!-- Navbar Right Menu-->
+      <ul class="app-nav">
+        <li class="app-search">
+          <input class="app-search__input" type="search" placeholder="Search">
+          <button class="app-search__button"><i class="fa fa-search"></i></button>
+        </li>
+        <!--Notification Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+          <ul class="app-notification dropdown-menu dropdown-menu-right">
+            <li class="app-notification__title">You have 4 new notifications.</li>
+            <div class="app-notification__content">
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                  <div>
+                    <p class="app-notification__message">Lisa sent you a mail</p>
+                    <p class="app-notification__meta">2 min ago</p>
+                  </div></a></li>
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                  <div>
+                    <p class="app-notification__message">Mail server not working</p>
+                    <p class="app-notification__meta">5 min ago</p>
+                  </div></a></li>
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                  <div>
+                    <p class="app-notification__message">Transaction complete</p>
+                    <p class="app-notification__meta">2 days ago</p>
+                  </div></a></li>
+              <div class="app-notification__content">
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Lisa sent you a mail</p>
+                      <p class="app-notification__meta">2 min ago</p>
+                    </div></a></li>
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Mail server not working</p>
+                      <p class="app-notification__meta">5 min ago</p>
+                    </div></a></li>
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Transaction complete</p>
+                      <p class="app-notification__meta">2 days ago</p>
+                    </div></a></li>
+              </div>
+            </div>
+            <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
+          </ul>
+        </li>
+        <!-- User Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+          <ul class="dropdown-menu settings-menu dropdown-menu-right">
+            <li><a class="dropdown-item" href="/admin/page-user"><i class="fa fa-user fa-lg"></i> Perfil</a></li>
+            <li><a class="dropdown-item" href="/admin/login"><i class="fa fa-sign-out fa-lg"></i> Sair</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+        <div>
+          <p class="app-sidebar__user-name">Bem-vindo(a) a PCM</p>
+          <!--<p class="app-sidebar__user-designation">Nome Utilizador</p>-->
+        </div>
+      </div>
+      <ul class="app-menu">
+        <li><a class="app-menu__item active" href="/admin/index"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Inicio</span></a></li>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Casos</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a class="treeview-item" href="/admin/cases-list"><i class="icon fa fa-circle-o"></i> Lista</a></li>
+            <li><a class="treeview-item" href="/admin/cases-create" rel="noopener"><i class="icon fa fa-circle-o"></i> Novo Registo</a></li>
+          </ul>
+        </li>
+        <li><a class="app-menu__item" href="/admin/page-user"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Perfil</span></a></li>
+              <li><a class="app-menu__item" href="/admin/logout"><i class="app-menu__icon fas fa-sign-out-alt"></i><span class="app-menu__label">Sair</span></a></li>
+
+      </ul>
+    </aside>
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Casos da COVID-19</h1>
+          <p>Novo registo</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"> Casos da COVID-19</li>
+          <li class="breadcrumb-item"><a href="#">Novo Registo</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <h3 class="tile-title">Novo Caso</h3>
+            <div class="tile-body">
+
+              <form action="/admin/cases-create" method="POST">
+
+                <input hidden class="form-control" type="number" value="1" name="userid">
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Resultado *</label>
+                      <select class="form-control" name="result" required>
+                        <option selected value="">--Selecione--</option>
+                        <option value="Positivo">Positivo</option>
+                        <option value="Negativo">Negativo</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Idade *</label>
+                      <input class="form-control" type="number" name="age" min="0" max="120" placeholder="Preencha a idade..." required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Nr. aprox. de contactos *</label>
+                      <input class="form-control" type="number" min="1" max="5000" name="contacts" placeholder="Preencha o Nr. aprox. de contactos..." required>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Email</label>
+                      <input class="form-control" type="email" name="email" placeholder="Preencha a email...">
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Telefone * </label>
+                      <input class="form-control" type="tel" name="telephone" minlength="9" maxlength="9" placeholder="Preencha o telefone..." required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Telefone Alternativo</label>
+                      <input class="form-control" type="number" name="alt_telephone" minlength="9" maxlength="9" placeholder="Preencha o telefone...">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Provincia *</label>
+                      <select class="form-control" name="province" required>
+                        <option selected>--Selecione--</option>
+                        <option value="Maputo Cidade">Maputo Cidade</option>
+                        <option value="Maputo Provincia">Maputo Provincia</option>
+                        <option value="Gaza">Gaza</option>
+                        <option value="Inhambane">Inhambane</option>
+                        <option value="Sofala">Sofala</option>
+                        <option value="Manica">Manica</option>
+                        <option value="Tete">Tete</option>
+                        <option value="Zambézia">Zambézia</option>
+                        <option value="Niassa">Niassa</option>
+                        <option value="Nampula">Nampula</option>
+                        <option value="Cabo Delgado">Cabo Delgado</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Quarteirao</label>
+                      <input class="form-control" type="number" name="qrHouse" min="1" max="5000" placeholder="Preencha o quarteirao...">
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Nr. de Casa</label>
+                      <input class="form-control" type="number" name="nrHouse" min="1" max="10000" placeholder="Preencha o nr. de casa...">
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Morada</label>
+                      <input class="form-control" type="text" name="address" minlength="10" maxlength="150" placeholder="Preencha a morada...">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label">Sexo *</label>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" value="Masculino">Masculino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" value="Feminino">Feminino
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label class="control-label">Observações</label>
+                    <textarea class="form-control" rows="5" name="obs" minlength="10" maxlength="250" placeholder="Descreva as observações"></textarea>
+                  </div>
+                </div>
+
+                  <div class="tile-footer">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Registar</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-secondary" type="reset"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>
+                  </div>
+
+                   </form>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="clearix"></div>
+
+      </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/0.7.8/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+  </body>
+</html>
