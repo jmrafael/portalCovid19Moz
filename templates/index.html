@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt_MZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="O PCM é um portal que dispõe de uma base de dados central que armazena informações acerca dos casos da COVID-19 em Moçambique.">
+  <meta name="author" content="Júlio Rafael">
+  <link rel="shortcut icon" href="/static/img/bg-pcm.jpg" type="image/x-icon">
+  <link rel="icon" href="/static/img/bg-pcm.jpg" type="image/x-icon">
+
+  <title>Coronavírus - Portal da COVID-19 em Moçambique (PCM)</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/static/css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">PCM - Coronavírus</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top">Início</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#dados">Ver dados</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#plataformas">Plataformas</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contactos">Contactos</a>
+      </li>
+	  <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="/admin/login">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1"> Bem-vindo(a) a PCM </h1>
+      <h3 class="mb-5">
+        <em>Portal da COVID-19 (Coronavírus) em Moçambique</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#dados">Dados actualizados</a>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <!-- Dados -->
+  <section class="content-section" id="dados">
+    <div class="container">
+      <div class="content-section-heading text-center">
+        <h3 class="text-secondary mb-0">Coronavírus em Moçambique</h3>
+        <h2 class="mb-5">Dados actualizados</h2>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content text-center">
+                <div class="h1">
+                  {% for ps in p %}
+                    {{ ps.p }}
+                  {% endfor %}
+                  </div>
+                <div class="h2">Casos positivos</div>
+                <p class="mb-0">Total de casos positivos registados até {{ data }}</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/img/portfolio-4.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content text-center">
+                <div class="h1">
+                  {% for neg in n %}
+                    {{ neg.n }}
+                  {% endfor %}
+                </div>
+                <div class="h2">Casos negativos</div>
+                <p class="mb-0">Total de casos negativos registados até {{ data }}</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/img/portfolio-2.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content text-center">
+                <div class="h1">
+                  {% for rec in r %}
+                    {{ rec.r }}
+                  {% endfor %}
+                </div>
+                <div class="h2">Casos recuperados</div>
+                <p class="mb-0">Total de casos recuperados registados até {{ data }}</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/img/portfolio-2.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content text-center">
+                <div class="h1">
+                  {% for obt in o %}
+                    {{ obt.o }}
+                  {% endfor %}
+                </div>
+                <div class="h2">Óbitos</div>
+                <p class="mb-0">Total de óbitos registados até {{ data }}</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/img/portfolio-4.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Plataformas -->
+  <section class="content-section bg-primary text-white text-center" id="plataformas">
+    <div class="container">
+      <div class="content-section-heading">
+        <h3 class="text-secondary mb-0">Informe-se acerca do Coronavírus em Moçambique</h3>
+        <h2 class="mb-5">Plataformas de informação</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+			<a href="https://covid19.ins.gov.mz" target="_blank">
+			  <span class="service-icon rounded-circle mx-auto mb-3">
+				<i class="icon-screen-smartphone"></i>
+			  </span>
+			</a>
+          <h4>
+            <strong>Website Fica Atento</strong>
+          </h4>
+          <!--<p class="text-faded mb-0">Looks great on any screen size!</p>-->
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <a href="https://experience.arcgis.com/experience/28d6725c51e545af8583f91c5494c624" target="_blank">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-pencil"></i>
+          </span>
+          </a>
+          <h4>
+            <strong>Dashboard do MISAU</strong>
+          </h4>
+          <!--<p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>-->
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <a href="https://api.whatsapp.com/send?phone=258843318727&text=Ol%C3%A1" target="_blank">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-like"></i>
+          </span>
+          </a>
+          <h4>
+            <strong>WhatsApp Fica Atento</strong>
+          </h4>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="https://riscocovid19.misau.gov.mz/" target="_blank">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-mustache"></i>
+          </span>
+          </a>
+          <h4>
+            <strong>Auto-Avaliação</strong>
+          </h4>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center" id="contactos">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://web.facebook.com/jmoisesrafael/" target="_blank">
+            <i class="icon-social-facebook"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/j%C3%BAlio-mois%C3%A9s-rafael-34307068/" target="_blank">
+            <i class="icon-social-linkedin"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="https://github.com/jmrafael" target="_blank">
+            <i class="icon-social-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; by Júlio Rafael for <a href="https://cs50.harvard.edu/x/2020/" target="_blank">CS50 </a> </p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>

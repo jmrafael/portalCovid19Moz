@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="O PCM é um portal que dispõe de uma base de dados central que armazena informações acerca dos casos da COVID-19 em Moçambique.">
+    <meta name="author" content="Júlio Rafael">
+    <link rel="icon" href="/static/img/bg-pcm.jpg" type="image/x-icon">
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/static/img/bg-pcm.jpg" type="image/x-icon">
+
+    <title>Coronavírus - Portal da COVID-19 em Moçambique (PCM)</title>
+  </head>
+  <body>
+    <section class="material-half-bg">
+      <div class="cover"></div>
+    </section>
+    <section class="login-content">
+      <div class="logo">
+        <h1>COVID-19 : PCM</h1>
+      </div>
+      <div class="login-box">
+
+        <form class="login-form" action="/admin/login" method="POST">
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>ENTRADA</h3>
+          <div class="form-group">
+            <label class="control-label">Nome de Utilizador</label>
+            <input class="form-control" type="text" name="username" placeholder="Utilizador" autofocus required>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Senha</label>
+            <input class="form-control" name="password" type="password" placeholder="Senha" required>
+          </div>
+          <div class="form-group">
+            <div class="utility">
+              <div class="animated-checkbox">
+                <!-- <label>
+                  <input type="checkbox"><span class="label-text">Stay Signed in</span>
+                </label> -->
+               <p class="semibold-text mb-2" style="float: left;"><a href="/" class="btn btn-info btn-block"> <i class="fa fa-arrow-left"></i> ir ao Portal</a></p>
+              </div>
+              <p class="semibold-text mb-2"><a href="#" data-toggle="flip" class="btn btn-info btn-block"><i class="fa fa-plus"></i> novo utilizador</a></p>
+            </div>
+          </div>
+          <div class="form-group btn-container">
+            <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>ENTRAR</button>
+          </div>
+        </form>
+
+        <div style="min-height: 440px;">
+          <form class="forget-form" id="newUser" action="/admin/register" method="POST">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Registar Utilizador</h3>
+            <div class="form-group">
+              <label class="control-label" for="username">Nome completo *</label>
+              <input class="form-control" for="name" autofocus type="text" placeholder="Nome completo" name="name" autofocus required>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="username">Utilizador *</label>
+              <input class="form-control" for="username" autofocus type="text" placeholder="Utilizador" name="username" required>
+            </div>
+            <div class="row">
+              <div class="form-group col-6">
+              <label class="control-label" for="password">Senha *</label>
+              <input class="form-control" for="password" autofocus type="password" placeholder="******" name="password" required>
+              </div>
+              <div class="form-group col-6">
+                <label class="control-label" for="password">Confirmar Senha *</label>
+                <input class="form-control" for="password" autofocus type="password" placeholder="******" name="confirmation" required>
+              </div>
+            </div>
+            <div class="form-group btn-container">
+              <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-save fa-lg fa-fw"></i>Registar</button>
+            </div>
+            <div class="form-group mt-3">
+              <p class="semibold-text mb-0"><a href="/admin/login" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Voltar ao Login</a></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+    <!-- Essential javascripts for application to work-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/0.7.8/pace.min.js"></script>
+    <script type="text/javascript">
+      // Login Page Flipbox control
+      $('.login-content [data-toggle="flip"]').click(function() {
+      	$('.login-box').toggleClass('flipped');
+      	return false;
+      });
+    </script>
+  </body>
+</html>
